@@ -117,6 +117,18 @@ while True:
         Content-Length: 0
 
         """
+
+        # for error testing
+        #print("Sending 404 Not Found")
+
+        #response = """SIP/2.0 404 Not Found
+        #Via: SIP/2.0/UDP 127.0.0.1:5060
+        #From: <sip:client1@127.0.0.1>
+        #To: <sip:client2@127.0.0.1>
+        #Call-ID: 1234
+        #CSeq: 1 INVITE
+        #Content-Length: 0
+        #"""
         sock.sendto(response.encode(), addr)
 
     # Handle ACK request to confirm call establishment
